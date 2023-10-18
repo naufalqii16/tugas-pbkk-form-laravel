@@ -14,5 +14,11 @@ Route::post('employee', [EmployeeController::class,'store']);
 Route::get('display', [ShowController::class,'show']);
 
 
+foreach (scandir($path = app_path('Modules')) as $dir) {
+    if (file_exists($filepath = "{$path}/{$dir}/Presentation/web.php")) {
+        require $filepath;
+    }
+}
+
 
 

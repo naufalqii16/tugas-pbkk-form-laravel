@@ -7,21 +7,21 @@ use App\Http\TA\Domain\Enum\StatusTopik;
 class CreateTopikRequest
 {
     public function __construct(
-        private string $judul,
-        private string $nama_dosen,
+        private string $name,
+        private string $email,
         private StatusTopik $status,
     )
     {
     }
 
-    public function getJudul(): string
+    public function getName(): string
     {
-        return $this->judul;
+        return $this->name;
     }
 
-    public function getNamaDosen(): string
+    public function getEmail(): string
     {
-        return $this->nama_dosen;
+        return $this->email;
     }
 
     public function getStatus(): StatusTopik
